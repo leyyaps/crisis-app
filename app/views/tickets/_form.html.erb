@@ -1,4 +1,5 @@
-<%= form_for(ticket) do |f| %>
+
+<%= form_for(ticket, html: {multipart: true}) do |f| %>
   <% if ticket.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
@@ -13,17 +14,17 @@
 
   <div class="field">
     <%= f.label :small_image %>
-    <%= f.text_field :small_image %>
+    <%= f.file_field :small_image %>
   </div>
 
   <div class="field">
     <%= f.label :cover_image %>
-    <%= f.text_field :cover_image %>
+    <%= f.file_field :cover_image %>
   </div>
 
   <div class="field">
     <%= f.label :square_image %>
-    <%= f.text_field :square_image %>
+    <%= f.file_field :square_image %>
   </div>
 
   <div class="field">

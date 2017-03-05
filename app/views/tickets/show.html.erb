@@ -2,17 +2,20 @@
 
 <p>
   <strong>Small image:</strong>
-  <%= @ticket.small_image %>
+ 
+  <%= image_tag(@ticket.small_image_url) if @ticket.small_image.present? %>
 </p>
 
 <p>
   <strong>Cover image:</strong>
   <%= @ticket.cover_image %>
+  <%= image_tag(@ticket.cover_image_url) if @ticket.cover_image.present? %>
 </p>
 
 <p>
   <strong>Square image:</strong>
   <%= @ticket.square_image %>
+  <%= image_tag(@ticket.square_image_url) if @ticket.square_image.present? %>
 </p>
 
 <p>
