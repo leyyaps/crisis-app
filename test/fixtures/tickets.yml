@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  small_image: MyString
+  cover_image: MyString
+  square_image: MyString
+  ticket_id: MyString
+  date: 2017-03-05
+  opening_time: 2017-03-05 12:53:33
+  theme: MyString
+  description: MyText
+
+two:
+  small_image: MyString
+  cover_image: MyString
+  square_image: MyString
+  ticket_id: MyString
+  date: 2017-03-05
+  opening_time: 2017-03-05 12:53:33
+  theme: MyString
+  description: MyText

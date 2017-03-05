@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Small image:</strong>
+  <%= @ticket.small_image %>
+</p>
+
+<p>
+  <strong>Cover image:</strong>
+  <%= @ticket.cover_image %>
+</p>
+
+<p>
+  <strong>Square image:</strong>
+  <%= @ticket.square_image %>
+</p>
+
+<p>
+  <strong>Ticket:</strong>
+  <%= @ticket.ticket_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @ticket.date %>
+</p>
+
+<p>
+  <strong>Opening time:</strong>
+  <%= @ticket.opening_time %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @ticket.theme %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ticket.description %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>
