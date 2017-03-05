@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'termsandconditions' => 'static_pages#termsandconditions'
 
-  resources :posts
+  resources :posts,  only: [:show, :index]
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :tickets, only: [:show, :index]
