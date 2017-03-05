@@ -1,0 +1,36 @@
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerCRISIS" aria-controls="navbarTogglerCRISIS" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand hidden-sm-down") %>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-lg-right">
+      <li class="nav-item active">
+        <%= link_to 'Home', root_url, :class =>'nav-link hvr-underline-reveal' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'About', about_url, :class =>'nav-link hvr-underline-reveal' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'News', posts_url, :class =>'nav-link hvr-underline-reveal' %>
+      </li>
+      
+      <li class="nav-item">
+        <%= link_to 'Tickets', tickets_url, :class =>'nav-link hvr-underline-reveal' %>
+      </li>
+      
+      <li class="nav-item">
+        <%= link_to 'Socials', socials_url, :class =>'nav-link hvr-underline-reveal' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Jobs', jobs_url, :class =>'nav-link hvr-underline-reveal' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Lost Property', lostproperty_url, :class =>'nav-link pull-xs-right hvr-underline-reveal' %>
+      </li>
+    </ul>
+   
+  </div>
+</nav>
+
