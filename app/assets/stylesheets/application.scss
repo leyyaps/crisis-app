@@ -615,7 +615,8 @@
  // HERO
 
  .hero-unit {
-     background-image:url('/images/happy-customers.jpg');
+    background:url('happy-customers.jpg');
+     
      background-size:cover;
      background-color: #EEEEEE;
      height:300px;

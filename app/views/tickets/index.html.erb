@@ -1,40 +1,36 @@
-<p id="notice"><%= notice %></p>
+<%= render 'partials/event-carousel' %>
 
-<h1>Tickets</h1>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Small image</th>
-      <th>Cover image</th>
-      <th>Square image</th>
-      <th>Ticket</th>
-      <th>Date</th>
-      <th>Opening time</th>
-      <th>Theme</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="card-deck">
+<% @tickets.each do |ticket| %>
+  <div class="card text-center">
+    <%= image_tag ticket.square_image_url(:thumb),:alt => "CRISIS Event", :class => "card-img-top img-fluid" if ticket.square_image? %>
+    
+    <div class="card-block">
+      <h4 class="card-title"><%= ticket.theme %></h4>
+      <h5><%= ticket.date.to_formatted_s(:rfc822) %></h5>
+      <p class="card-text"><%= ticket.description %></p>
+      <%= link_to 'Buy Tickets', ticket, :class =>'btn btn-primary text-uppercase' %>
+    </div>
+  </div>
+  <% end %>
+</div>
 
-  <tbody>
-    <% @tickets.each do |ticket| %>
-      <tr>
-        <td><%= ticket.small_image %></td>
-        <td><%= ticket.cover_image %></td>
-        <td><%= ticket.square_image %></td>
-        <td><%= ticket.ticket_link_id %></td>
-        <td><%= ticket.date %></td>
-        <td><%= ticket.opening_time %></td>
-        <td><%= ticket.theme %></td>
-        <td><%= ticket.description %></td>
-        <td><%= link_to 'Show', ticket %></td>
-        
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</div>
 
-<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
