@@ -3,9 +3,11 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerCRISIS" aria-controls="navbarTogglerCRISIS" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand hidden-sm-down") %>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-lg-right">
+  <%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand hidden-md-down") %>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerCRISIS">
+    
+    <ul class="navbar-nav">
       <li class="nav-item active">
         <%= link_to 'Home', root_url, :class =>'nav-link hvr-underline-reveal' %>
       </li>

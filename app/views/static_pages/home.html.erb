@@ -1,2 +1,34 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<%= render 'partials/event-carousel' %>
+
+<div class="light-grey-band no-margin animated slideInLeft">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-block">
+          <h2 class="text-uppercase headline">The UKs Biggest Weekly Student Night</h2>
+          <p class="lead text-center intro">Welcome to the <strong>biggest</strong> and <strong>best</strong> student night in the UK. Every Wednesday CRISIS take over Rock City to bring you the ultimate party and Official Wednesday Student Night for Nottingham University .</p>
+        </div>
+      </div>
+  </div>   
+</div>
+
+<div class="container">
+  <h2 class="mt-2">Coming up...</h2>
+  <div class="card-deck-wrapper">
+    <div class="card-deck">
+      <% @tickets.each_with_index do |ticket, index| %>
+      <div class="card animated slideInUp">
+        <%= image_tag ticket.square_image_url, :class =>"img-fluid card-img-top", :alt => "CRISIS Event" if index <= 3 %>
+        <div class="card-block text-block">
+          <h4 class="card-title text-uppercase"><%= ticket.theme %></h4>
+          <h6 class="text-uppercase card-event-date"><%= ticket.date.strftime("%d.%m.%Y") %></h6>
+          <p class="card-text"><%= ticket.description %></p>
+          <%= link_to 'Buy Tickets', ticket, :class =>'btn btn-primary text-uppercase' %>
+        </div>
+      </div>
+      <% end %>
+      
+    </div>
+  </div>
+</div>
+
+<%= render 'partials/icons' %>
