@@ -8,9 +8,10 @@ end
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
-
+gem 'figaro'
+gem 'aws-sdk', '~> 2'
 gem 'carrierwave'
-
+gem 'fog'
 gem 'mini_magick'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
