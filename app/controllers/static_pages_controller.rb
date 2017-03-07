@@ -3,8 +3,9 @@ class StaticPagesController < ApplicationController
   end
 
   def home
-    @tickets = Ticket.all
+  
     @tickets = Ticket.order(:date)
+    @arr = @tickets.first(4)
   end
 
   def jobs

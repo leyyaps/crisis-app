@@ -4,7 +4,8 @@ class TicketsController < ApplicationController
   # GET /tickets
   # GET /tickets.json
   def index
-    @tickets = Ticket.all
+    @tickets = Ticket.order(:date)
+
   end
 
   # GET /tickets/1
@@ -69,6 +70,6 @@ class TicketsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ticket_params
-      params.require(:ticket).permit(:small_image, :cover_image, :square_image, :ticket_id, :date, :opening_time, :theme, :description)
+      params.require(:ticket).permit(:small_image, :cover_image, :square_image, :ticket_link_id, :date, :opening_time, :theme, :description)
     end
 end

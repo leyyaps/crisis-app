@@ -13,10 +13,10 @@
 
 <div class="container">
   <h2 class="mt-2">Coming up...</h2>
-  <div class="card-columns">
+ 
   <div class="card-deck-wrapper">
     <div class="card-deck">
-      <% @tickets.each_with_index do |ticket, index| %>
+      <% @arr.each_with_index do |ticket, index| %>
       <div class="card animated slideInUp">
         <%= image_tag ticket.square_image_url, :class =>"img-fluid card-img-top", :alt => "CRISIS Event" if index <= 3 %>
         <div class="card-block text-block">
@@ -30,7 +30,7 @@
       
     </div>
   </div>
-  </div>
+  
 </div>
 
 <%= render 'partials/icons' %>
