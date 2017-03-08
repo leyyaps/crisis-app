@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   get 'termsandconditions' => 'static_pages#termsandconditions'
 
+  match '/contact_us',     to: 'messages#new',             via: 'get'
+  resources "messages", only: [:new, :create]
+  
   resources :posts,  only: [:show, :index]
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

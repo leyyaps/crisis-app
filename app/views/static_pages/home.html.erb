@@ -16,7 +16,7 @@
  
   <div class="card-deck-wrapper">
     <div class="card-deck">
-      <% @arr.each_with_index do |ticket, index| %>
+      <% @tickets.each_with_index do |ticket, index| %>
       <div class="card animated slideInUp">
         <%= image_tag ticket.square_image_url, :class =>"img-fluid card-img-top", :alt => "CRISIS Event" if index <= 3 %>
         <div class="card-block text-block">

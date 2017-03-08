@@ -1,0 +1,317 @@
+<div class="hero-unit hero-2 animated fadeIn">
+  <div class="container hero-content">
+        <h1>Contact Us</h1>
+        <h2>Answers to all your CRISIS related questions</h2>
+  </div>
+</div>
+
+
+
+<div class="container">
+
+<% flash.each do |key, value| %>
+  <% alert_class = case key
+                   when :notice then "success"
+                   when :error then "danger"
+                   else key
+                   end %>
+  <%= content_tag :div, class: "alert alert-#{alert_class}" do %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= value %>
+  <% end %>
+<% end %>
+
+
+</div>
+
+<div class="container">
+  <h3 class="mt-3">Some common questions for you first...</h3>
+   
+      <div id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="card">
+          <div class="card-header" role="tab" id="headingOne">
+            <h5 class="mb-0">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            I can't find my ticket
+            </a>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="card-block">
+            <ol>
+            <li>If you haven’t already done so check your junk email folder.</li>
+            <li>If you still can’t find them log into your <a href="http://www.fixr.com">fixr</a> account, go into the ticket section and check there. Alternatively, please use their app.</li>
+            <li>If there’s still no sign of any tickets but money has left your account, contact fix directly.</li>
+            </ol>
+            </div>
+          </div>
+        </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingTwo">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              I've lost my stuff and/or dignity
+            </a>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="card-block">
+            Sorry to hear that. You need to head to our <%= link_to 'lost-property', lostproperty_url, :class => "links"  %> page. Self respect is unlikely to be found.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingThree">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              I have lost my ID but am planning on coming. Will you let me in?
+            </a>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="card-block">
+            It happens. Sadly we can't help. It is entirely at the discretion of which security member you get on the night. Be nice, tell the truth and you are usually fine.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingFour">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              My squad is not from Notts Uni
+            </a>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="card-block">
+            We can't all be perfect. Not to worry, we accept any University student card. We also allow non-students when accompanied by a UoN carded student.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingFive">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Ive bought a ticket from someone else. Will it work?
+            </a>
+          </h5>
+        </div>
+        <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+          <div class="card-block">
+            No guarantees. Any tickets bought through resellers is done at the purchasers own risk.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingSix">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              Can I pay on the door?
+            </a>
+          </h5>
+        </div>
+        <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
+          <div class="card-block">
+            Yes - Every week. It's usually £6 before 11:30pm and £7 after. You can keep up to date on our paying queue length on our snapchat (wearecrisis) or <a class="links" href="https://www.twitter.com/ilove_crisis">twitter</a> feed.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingSeven">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              Do you take card?
+            </a>
+          </h5>
+        </div>
+        <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven">
+          <div class="card-block">
+            Yes. Both on entry and at the bars. There is also a cash machine inside if you are feeling old school.
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+</div>
+
+<div class="light-grey-band mt-3">
+  <div class="container animated fadeIn">
+    <div class="row contact-section">
+      <div class="col-md-6">
+        <h3 class="red">Venue Address</h3>
+        
+        <address>
+          Rock City<br>
+          8, Talbot St,<br>
+          Nottingham<br>
+          NG1 5GG<br>
+        </address>
+        
+        <h3 class="red">Opening Hours</h3>
+        <p>Wednesdays: 9:30pm - 3am <small>(times vary by event see the <%= link_to 'ticket page', tickets_url, :class => 'remove-deco' %> for more info)</small></p>
+        
+        <p>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+          <i class="fa fa-phone fa-stack-1x"></i>
+        </span> 0330 332 0611 <small class="text-muted">This number has <strong>no access</strong> to lost property</small>
+        </p>
+
+        <p>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
+        </span> 07969 955 639 <small class="text-muted">9am - 5pm only | no access to lost property</small>
+        </p>
+
+        <p>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
+        </span> info@carpenoctum.co.uk <small class="text-muted">General Enquiries</small>
+        </p>
+        
+        <p>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-question fa-stack-1x" aria-hidden="true"></i>
+        </span> <%= link_to 'Lost your shit?', lostproperty_url, :class => "links" %>
+        </p>
+
+        <h3 class="red">Our Office in Lenton</h3>
+        
+        <address>
+          Carpe Noctum<br>
+          Unit T-9, Lenton Business Centre,<br>
+          Lenton Boulevard,<br>
+          Nottingham<br>
+          NG7 2BY<br>
+        </address>
+
+    </div>
+
+   
+     
+   
+
+
+    <div class="col-md-6">
+    <h3 class="red">Contact Us</h3>
+
+    <%= simple_form_for @message, :html => {:class => 'form-horizontal' } do |f| %>
+      <div class="form-group">
+        <%= f.input :name, :required => true, placeholder: "Enter name", :input_html => { :class => 'form-control' } %>
+      </div>
+      <%= f.input :email, :required => true, placeholder: "Enter email", :input_html => { :class => 'form-control' } %>
+      <small class="text-muted">We never share your email with anyone else</small>
+      <%= f.input :mobile, :required => true, placeholder: "Enter your mobile number", :input_html => { :class => 'form-control' } %>
+      <small class="text-muted">We never share your mobile with anyone else.</small>
+      <%= f.input :message, :as => :text, :required => true, placeholder: "Enter your message. Please do not use for lost property.", :input_html => { :class => 'form-control' } %>
+      <div class= "hidden">
+        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+      <div>
+        </br>
+        <%= f.button :submit, 'SEND MESSAGE', :class=> "btn btn-primary" %>
+      </div>
+    <% end %>
+      
+     
+        <div class="social-icons my-5">
+        <a href="https://www.facebook.com/ilovecrisis"><i class="fa fa-facebook-official fa-fw fa-3x" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/crisisnottingham"><i class="fa fa-instagram fa-fw fa-3x" aria-hidden="true"></i></a>
+        <a href="https://www.twitter.com/ilove_crisis"><i class="fa fa-twitter-square fa-fw fa-3x" aria-hidden="true"></i></a>
+        
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<div id="map">
+  
+</div>
+<div class="container spacer">
+<h2>The Team</h2>
+  <div class="row spacer">
+      <div class="col-md-4 text-center profile">
+      <%= image_tag("alex.jpg", :alt => "Alex Ottridge", :class => "rounded-circle") %>
+        
+          <p class="lead">Alex Ottridge</p>
+          <p>Events Coordinator</p>
+          <p>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
+          </span> 07950 100 720</p>
+          <p>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
+          </span> <a class="links" href="mailto:alex.ottridge@carpenoctum.co.uk">alex.ottridge@carpenoctum.co.uk</a></p>
+      </div>
+
+      <div class="col-md-4 text-center profile">
+        <%= image_tag("lucy.jpg", :alt => "Lucy Bristow", :class => "rounded-circle") %>
+          <p class="lead">Lucy Bristow</p>
+          <p>Social Media Manager</p>
+          <p>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
+          </span> 07875 654 896</p>
+          <p><span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
+          </span> <a class="links" href="mailto:lucy.bristow@carpenoctum.co.uk">lucy.bristow@carpenoctum.co.uk</a></p>
+      </div>
+
+      <div class="col-md-4 text-center profile">
+        <%= image_tag("nicola.jpg", :alt => "Nicola Tatler", :class => "rounded-circle") %>
+          <p class="lead">Nicola Tatler</p>
+          <p>Marketing and Office Manager</p>
+          <p>
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
+          </span> 07969 955 639</p>
+          <p><span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
+          </span> <a class="links" href="mailto:nicola.barker@carpenoctum.co.uk">nicola.tatler@carpenoctum.co.uk</a></p>            
+      </div>
+  </div>
+</div>
+<div class="light-grey-band">
+  <div class="container">
+    <p>Alex is our Events Coordinator and is the best person to harrass regarding guestlist enquiries and socials. Lucy is our social media queen bee and Nicola runs the show at our office in Lenton.</p>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  function initMap() {
+          var crisis = {lat: 52.956056, lng: -1.154179};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: crisis,
+            scrollwheel:  false
+          });
+          var marker = new google.maps.Marker({
+            position: crisis,
+            map: map
+          });
+        }
+</script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3XDYnurNyQcl1fhyiZNN1RwZN8r3FPm8&callback=initMap">
+    </script>
+
+
+
+
+

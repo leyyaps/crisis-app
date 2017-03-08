@@ -14,6 +14,11 @@ gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
 
+
+
+gem 'mail_form'
+gem 'simple_form'
+
 gem 'bootstrap', '~> 4.0.0.alpha6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
@@ -52,6 +57,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'foreman'
   gem 'byebug', platform: :mri
 end
 

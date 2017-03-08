@@ -82,6 +82,13 @@
      margin-right: 20px
  }
 
+ .alert.alert-notice {
+  background-color:#3D3D3A;
+}
+button.close {
+  color: #fff;
+}
+
 
  @-moz-keyframes dropHeader {
      0% {
@@ -844,3 +851,9 @@
 
 
  //  FOOTER END
+
+
+
+ abbr[title="required"] {
+   display: none;
+ }
