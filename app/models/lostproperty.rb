@@ -1,0 +1,2 @@
+class Lostproperty < ApplicationRecord
+end

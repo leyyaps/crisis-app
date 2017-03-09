@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
 
   def home
     expired = Date.yesterday
-    
+
     @tickets = Ticket.order(:date).first(4)
     # @arr = @tickets.first(4)
   end
@@ -12,8 +12,7 @@ class StaticPagesController < ApplicationController
   def jobs
   end
 
-  def lostproperty
-  end
+ 
 
   def socials
   end

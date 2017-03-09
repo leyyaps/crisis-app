@@ -1,0 +1,2 @@
+class LostPropertiesController < ApplicationController
+end
