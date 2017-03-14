@@ -1,0 +1,54 @@
+
+
+<div class="hero-unit hero-4 animated fadeIn">
+  <div class="container hero-content">
+        <h1>Lost Your Shit</h1>
+        <h2>Let us know and we'll have a look for it</h2>
+  </div>
+</div>
+
+<div class="container">
+
+<% flash.each do |key, value| %>
+  <% alert_class = case key
+                   when :notice then "success"
+                   when :error then "danger"
+                   else key
+                   end %>
+  <%= content_tag :div, class: "alert alert-#{alert_class}" do %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= value %>
+  <% end %>
+<% end %>
+</div>
+
+<div class="container">
+<h2 class="mt-2">Lost Property Form</h2>
+<p class="">Please complete our lost property form and we will look for your item. <span class="red">Please note we only deal with lost property enquiries by email.</span></p>
+<%= simple_form_for @lost_item, :html => {:class => 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.input :name, :required => true, placeholder: "Enter name", :input_html => { :class => 'form-control' } %>
+  </div>
+  <div class="form-group">
+  <%= f.input :email, :required => true, placeholder: "Enter email", :input_html => { :class => 'form-control' } %>
+  </div>
+  <div class="form-group">
+  <%= f.input :mobile, :required => true, placeholder: "Enter your mobile number", :input_html => { :class => 'form-control' } %>
+  </div>
+  <div class="form-group">
+  <%= f.input :date, :label =>"Date you attended", :as => :date, :required => true, placeholder: "Date", :input_html => { :class => 'form-control col-sm-2' } %>
+  </div>
+  <div class="form-group">
+  <%= f.input :message,:label => "Your lost property details", :as => :text, :required => true, placeholder: "Please tell us about your lost items. Be as detailed as possible", :input_html => { :class => 'form-control' } %>
+  </div>
+  <p class="mt-2">We are sadly unable to return any lost dignity and self-respect.</p>
+  <div class= "hidden">
+    <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+  </div>
+  <div>
+    </br>
+    <%= f.button :submit, 'SEND MESSAGE', :class=> "btn btn-primary" %>
+  </div>
+<% end %>
+
+</div>

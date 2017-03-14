@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   match '/contact_us',     to: 'messages#new',             via: 'get'
   resources "messages", only: [:new, :create]
 
-  match '/lostproperty', to: 'lost_properties#new', via: 'get' 
-  resources 'lostproperties', only: [:new, :create]
+  match '/lostproperty', to: 'lost_items#new', via: 'get' 
+  resources 'lost_items', only: [:new, :create]
   
   resources :posts,  only: [:show, :index]
   devise_for :admin_users, ActiveAdmin::Devise.config

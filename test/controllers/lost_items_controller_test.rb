@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LostPropertiesControllerTest < ActionDispatch::IntegrationTest
+class LostItemsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
