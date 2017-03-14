@@ -9,9 +9,10 @@ class Message < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      :subject => "My Message Form",
-      :to => "andrew.smith@ipsofactouk.com",
-      :from => %("#{name}" <#{email}>)
+      :subject => "CRISIS website enquiry",
+      :to => "info@ipsofactouk.com",
+      :from => %("#{name}" <#{email}>),
+      :reply_to => %<#{email}>
     }
   end
 end
