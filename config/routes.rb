@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
 
 
-
+  match '/socials',     to: 'socials#new',             via: 'get'
+  resources "socials", only: [:new, :create]
 
   get 'termsandconditions' => 'static_pages#termsandconditions'
 
