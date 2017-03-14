@@ -4,7 +4,7 @@ class TicketsController < ApplicationController
   # GET /tickets
   # GET /tickets.json
   def index
-    @tickets = Ticket.order(:date)
+    @tickets = Ticket.upcoming
 
   end
 

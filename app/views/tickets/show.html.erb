@@ -1,47 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="cover-img" style="background:url(<%=@ticket.cover_image %>)">
+  <div class="container hero-content">
+    <img class="square-img" src="<%=@ticket.square_image %>">
+    
 
-<p>
-  <strong>Small image:</strong>
- 
-  <%= image_tag(@ticket.small_image_url) if @ticket.small_image.present? %>
-</p>
+    <h2 class="d-inline white"><%= @ticket.theme %> | <span class="red"><%= @ticket.date.to_formatted_s(:rfc822) %></span></h2>
+    
+  </div>
+</div>
+<div class="container">
 
-<p>
-  <strong>Cover image:</strong>
-  <%= @ticket.cover_image %>
-  <%= image_tag(@ticket.cover_image_url) if @ticket.cover_image.present? %>
-</p>
+<iframe src="https://fixr-app.com/event/12640?compact=true"
+        class="fixr">
+</iframe>
 
-<p>
-  <strong>Square image:</strong>
-  <%= @ticket.square_image %>
-  <%= image_tag(@ticket.square_image_url) if @ticket.square_image.present? %>
-</p>
-
-<p>
-  <strong>Ticket:</strong>
-  <%= @ticket.ticket_link_id %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @ticket.date %>
-</p>
-
-<p>
-  <strong>Opening time:</strong>
-  <%= @ticket.opening_time %>
-</p>
-
-<p>
-  <strong>Theme:</strong>
-  <%= @ticket.theme %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @ticket.description %>
-</p>
-
-|
 <%= link_to 'Back', tickets_path %>
+</div>
+
+
+

@@ -18,7 +18,7 @@
     <div class="card-deck">
       <% @tickets.each_with_index do |ticket, index| %>
       <div class="card animated slideInUp">
-        <%= image_tag ticket.square_image_url, :class =>"img-fluid card-img-top", :alt => "CRISIS Event" if index <= 3 %>
+        <%= image_tag ticket.square_image_url, :class =>"img-fluid card-img-top", :alt => "CRISIS Event" if index <= 3 && ticket.square_image? %>
         <div class="card-block text-block">
           <h4 class="card-title text-uppercase"><%= ticket.theme %></h4>
           <h6 class="text-uppercase card-event-date"><%= ticket.date.strftime("%d.%m.%Y") %></h6>

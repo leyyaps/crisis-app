@@ -1,0 +1,24 @@
+<%= form_for @lostproperty, url: lostproperty_path do |lostproperty_form| %>
+  <fieldset>
+    <div class="field">
+      <%= lostproperty_form.text_field :name, placeholder: "Name" %>
+    </div>
+    
+    <div class="field">
+      <%= lostproperty_form.email_field :email, placeholder: "Email"%>
+    </div>
+    <div class="field">
+      <%= lostproperty_form.text_field :mobile, placeholder: "Mobile"%>
+    </div>
+    
+    <div class="field">
+      <%= lostproperty_form.text_area :content, placeholder: "Message"%>
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <div class="field">
+      <%= lostproperty_form.submit "Send" %>
+    </div>
+  </fieldset>
+<% end %>

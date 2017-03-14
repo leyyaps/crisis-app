@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'jobs' => 'static_pages#jobs'
 
-  get 'lostproperty' => 'static_pages#lostproperty'
+
 
   get 'socials' => 'static_pages#socials'
 
@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   match '/contact_us',     to: 'messages#new',             via: 'get'
   resources "messages", only: [:new, :create]
+
+  get 'lostproperty', to: 'lost_properties#new', as: 'lostproperty'
+  post 'lostproperty', to: 'lost_properties#create'
   
   resources :posts,  only: [:show, :index]
   devise_for :admin_users, ActiveAdmin::Devise.config
