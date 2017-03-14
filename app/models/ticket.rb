@@ -8,4 +8,6 @@ class Ticket < ApplicationRecord
 
   scope :past, ->{ where("date < ?", Time.now)}
   scope :upcoming, -> { where("date > ?", Time.now)}
+
+
 end

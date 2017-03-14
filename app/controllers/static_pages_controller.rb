@@ -3,10 +3,8 @@ class StaticPagesController < ApplicationController
   end
 
   def home
-    expired = Date.yesterday
-
-    @tickets = Ticket.order(:date).first(4)
-    # @arr = @tickets.first(4)
+   @tickets = Ticket.upcoming
+   
   end
 
   def jobs
