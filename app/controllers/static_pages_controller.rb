@@ -12,8 +12,6 @@ class StaticPagesController < ApplicationController
 
  
 
-  def socials
-  end
 
   def termsandconditions
   end
