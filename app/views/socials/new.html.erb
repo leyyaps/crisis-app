@@ -1,3 +1,13 @@
+
+
+<div class="hero-unit hero-4 animated fadeIn">
+  <div class="container hero-content">
+        <h1>Socials</h1>
+        <h2>Book a social with us</h2>
+  </div>
+</div>
+
+
 <div class="container">
 
 <% flash.each do |key, value| %>
@@ -13,15 +23,21 @@
 <% end %>
 </div>
 <div class="container">
+<h2 class="mt-2">Social Booking Form</h2>
+<p class="">Please complete our booking form if you are thinking of organising a social for your club, society or organisation. <span class="red">Please note that we are sadly unable to supply tickets for any social with less than 3 weeks notice.</span></p>
 <%= simple_form_for @social, :html => {:class => 'form-horizontal' } do |f| %>
   <div class="form-group">
     <%= f.input :name, :required => true, placeholder: "Enter name", :input_html => { :class => 'form-control' } %>
   </div>
+  <div class="form-group">
   <%= f.input :email, :required => true, placeholder: "Enter email", :input_html => { :class => 'form-control' } %>
-  <small class="text-muted">We never share your email with anyone else</small>
+  </div>
+  <div class="form-group">
   <%= f.input :mobile, :required => true, placeholder: "Enter your mobile number", :input_html => { :class => 'form-control' } %>
-  <small class="text-muted">We never share your mobile with anyone else.</small>
-  <%= f.input :message, :as => :text, :required => true, placeholder: "Enter your message. Please do not use for lost property.", :input_html => { :class => 'form-control' } %>
+  </div>
+  <div class="form-group">
+  <%= f.input :message, :as => :text, :required => true, placeholder: "Please tell us about your event and how we can help you.", :input_html => { :class => 'form-control' } %>
+  </div>
   <div class= "hidden">
     <%= f.input :nickname, :hint => 'Leave this field blank!' %>
   </div>
