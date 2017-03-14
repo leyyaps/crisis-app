@@ -10,9 +10,10 @@ class LostItemsController < ApplicationController
     if @lost_item.deliver
       redirect_to lostproperty_path, notice: "Thank you! Your message has been sent."
     else
-      flash.now[:error] = 'Sorry! An error occured. Please try again.'
+      flash.now[:error] = @lost_item.errors.full_messages
       render :new
     end
   end
 
 end
+

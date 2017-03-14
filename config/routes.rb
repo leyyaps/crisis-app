@@ -6,14 +6,15 @@ Rails.application.routes.draw do
   get 'jobs' => 'static_pages#jobs'
 
 
-
   match '/socials',     to: 'socials#new',             via: 'get'
   resources "socials", only: [:new, :create]
 
   get 'termsandconditions' => 'static_pages#termsandconditions'
 
+
   match '/contact_us',     to: 'messages#new',             via: 'get'
   resources "messages", only: [:new, :create]
+
 
   match '/lostproperty', to: 'lost_items#new', via: 'get' 
   resources 'lost_items', only: [:new, :create]
