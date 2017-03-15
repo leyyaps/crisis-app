@@ -1,6 +1,6 @@
 
 
-<div class="hero-unit hero-4 animated fadeIn">
+<div data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="hero-unit hero-4 animated fadeIn">
   <div class="container hero-content">
         <h1>Socials</h1>
         <h2>Book a social with us</h2>
@@ -23,8 +23,9 @@
 <% end %>
 </div>
 <div class="container">
-<h2 class="mt-2">Social Booking Form</h2>
-<p class="">Please complete our booking form if you are thinking of organising a social for your club, society or organisation. <span class="red">Please note that we are sadly unable to supply tickets for any social with less than 3 weeks notice.</span></p>
+<h2 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="mt-2">Social Booking Form</h2>
+<p data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="">Please complete our booking form if you are thinking of organising a social for your club, society or organisation. <span class="red">Please note that we are sadly unable to supply tickets for any social with less than 3 weeks notice.</span></p>
+<div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once">
 <%= simple_form_for @social, :html => {:class => 'form-horizontal' } do |f| %>
   <div class="form-group">
     <%= f.input :name, :required => true, placeholder: "Enter name", :input_html => { :class => 'form-control' } %>
@@ -46,4 +47,5 @@
     <%= f.button :submit, 'SEND MESSAGE', :class=> "btn btn-primary" %>
   </div>
 <% end %>
+</div>
 </div>

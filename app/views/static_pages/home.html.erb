@@ -1,6 +1,6 @@
 <%= render 'partials/event-carousel' %>
 
-<div class="light-grey-band no-margin animated slideInLeft">
+<div class="light-grey-band no-margin" data-scroll="toggle(.fromBottomIn, .fromBottomOut) once">
   <div class="container">
       <div class="row">
         <div class="col-md-12 text-block">
@@ -14,11 +14,11 @@
 <div class="container">
   <h2 class="mt-2 mb-0">Coming up...</h2>
     
-    <div class="card-deck">
+    <div class="card-deck" data-scroll="toggle(.fromBottomIn, .fromBottomOut) once">
     <% @tickets.each_with_index do |ticket, index| %>
     <% if index <= 2 %>
       <div class="col-sm-6 col-md-4 mt-2">
-        <div class="card any-class animated slideInUp">
+        <div class="card equal-height animated slideInUp">
           <%= image_tag ticket.square_image_url, :class =>"img-fluid card-img-top", :alt => "CRISIS - Event" if ticket.square_image? %>
         <div class="card-block text-block">
         <h4 class="card-title text-uppercase"><%= ticket.theme %></h4>

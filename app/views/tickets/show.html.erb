@@ -1,4 +1,4 @@
-<div class="cover-img">
+<div data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="cover-img">
   <div class="container hero-content">
     <img class="square-img" src="<%=@ticket.square_image %>">
     
@@ -7,7 +7,7 @@
     
   </div>
 </div>
-<div class="container">
+<div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="container">
 
 <iframe src="https://fixr-app.com/event/<%= @ticket.fixr %>?compact=true"
         class="fixr">

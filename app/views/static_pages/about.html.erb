@@ -1,4 +1,4 @@
-<div class="hero-unit hero-5 animated fadeIn">
+<div data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="hero-unit hero-5 animated fadeIn">
   <div class="container hero-content">
         <h1>About Us</h1>
         <h2>The UKs Biggest Weekly Student Night</h2>
@@ -8,12 +8,12 @@
   <h2>What we do</h2>
     <div class="row">
       <div class="col-md-6">
-        <div class="embed-responsive embed-responsive-4by3">
+        <div data-scroll="toggle(.fromLeftIn, .fromLeftOut) once" class="embed-responsive embed-responsive-4by3">
           <iframe class="embed-responsive-item" src="//www.youtube.com/embed/vdPRsof3KvM"></iframe>
         </div>
       </div>
     <div class="col-md-6">
-      <div class="embed-responsive embed-responsive-4by3">
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="embed-responsive embed-responsive-4by3">
           <iframe class="embed-responsive-item" src="//www.youtube.com/embed/732QfBL9CqU"></iframe>
       </div>
     </div>
@@ -23,11 +23,12 @@
   <div class="container">
     <div class="row">
       <div class="offset-md-3 col-md-6 text-center lead">
-        <h2>Our Philosophy</h2>
+        <h2 data-scroll="toggle(.fromTopIn, .fromTopOut) once">Our Philosophy</h2>
+        <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once">
         <p>We are the biggest and best student night in the UK.</p>
         <p>The core idea behind the CRISIS brand is that of total inclusion. It is a student night for all students. It's that one night of the week where you are guaranteed to see all your friends in one place and share in the same experience.</p>
         <p>We believe that the happy memories that you create whilst at University will stay with you for life (at least those memories that make it past 24hrs anyway!). And to that end we work hard to make sure everything we do helps to make those moments special.</p>
-
+        </div>
       </div>
       
     </div>
@@ -35,30 +36,30 @@
 </div>
 
 <div class="container">
-  <h2 class="my-3">Reviews</h2>
+  <h2 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="my-3">Reviews</h2>
    <div class="row">
-    <div class="col-md-3 text-center">
+    <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="col-md-3 text-center">
       <%= image_tag("kateg.jpg", :alt => "Kate Gosschalk", :class => "rounded-circle") %>
         <blockquote class="blockquote">"The best night out in Notts - I love it"</blockquote>
         <p class="red">Kate Gosschalk</p>
                         
     </div>
     
-    <div class="col-md-3 text-center">
+    <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="col-md-3 text-center">
       <%= image_tag("beckyg.jpg", :alt => "Becky Greenwell", :class => "rounded-circle") %>
         <blockquote class="blockquote">"Great venue, great music and great people"</blockquote>
         <p class="red">Becky Greenwell</p>
                         
     </div>
 
-    <div class="col-md-3 text-center">
+    <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="col-md-3 text-center">
       <%= image_tag("james.jpg", :alt => "James Manning", :class => "rounded-circle") %>
         <blockquote class="blockquote">"Pretty much went every week last year"</blockquote>
         <p class="red">James Manning</p>
                         
     </div>
 
-    <div class="col-md-3 text-center">
+    <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="col-md-3 text-center">
       <%= image_tag("sanjana.jpg", :alt => "Sanjana Daswani", :class => "rounded-circle") %>
         <blockquote class="blockquote">"It wouldn't be Uni without CRISIS"</blockquote>
         <p class="red">Sanjana Daswani</p>
@@ -66,6 +67,6 @@
     </div>
     
    </div>
-   <p>For more reviews and to add your own one, please check out our <i class="fa fa-facebook fa-fw"></i><a class="links red-links" href="https://www.facebook.com/ilovecrisis">Facebook Fanpage</a> or <i class="fa fa-google-plus fa-fw" aria-hidden="true"></i><a class="links red-links" href="https://plus.google.com/+crisisnottingham/posts"> Google Plus page</a></p>
+   <p data-scroll="toggle(.fromBottomIn, .fromBottomOut) once">For more reviews and to add your own one, please check out our <i class="fa fa-facebook fa-fw"></i><a class="links red-links" href="https://www.facebook.com/ilovecrisis">Facebook Fanpage</a> or <i class="fa fa-google-plus fa-fw" aria-hidden="true"></i><a class="links red-links" href="https://plus.google.com/+crisisnottingham/posts"> Google Plus page</a></p>
   
 </div>

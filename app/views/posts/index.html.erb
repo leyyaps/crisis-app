@@ -1,4 +1,4 @@
-<div class="hero-unit animated fadeIn">
+<div data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="hero-unit animated fadeIn">
   <div class="container hero-content">
       <h1>NEWS</h1>
       <h2>The latest announcements from the team here at CRISIS.</h2>
@@ -10,7 +10,7 @@
 
 <div class="container animated fadeIn">
   <% @posts.each do |post| %>
-    <div class="row is-flex post">
+    <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="row is-flex post">
       <div class="col-xs-6 col-md-4">
         
         <%= image_tag post.image_url,:alt => "News Item", :class => "img-fluid" if post.image? %>

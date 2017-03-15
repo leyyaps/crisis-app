@@ -11,7 +11,7 @@ class LostItem < MailForm::Base
   def headers
     {
       :subject => "CRISIS Lost Property Enquiry",
-      :to => "andrew.smith@ipsofactouk.com",
+      :to => "lostproperty@rock-city.co.uk",
       :from => %("#{name}" <#{email}>),
       :reply_to => %<#{email}>
     }
