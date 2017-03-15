@@ -10,13 +10,13 @@
 
 <div class="container animated fadeIn">
   <% @posts.each do |post| %>
-    <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="row is-flex post">
-      <div class="col-xs-6 col-md-4">
+    <div class="row is-flex post">
+      <div data-scroll="toggle(.fromLeftIn, .fromLeftOut) once" class="col-xs-6 col-md-4">
         
         <%= image_tag post.image_url,:alt => "News Item", :class => "img-fluid" if post.image? %>
         
       </div>
-      <div class="col-xs-12 col-md-8 post-content">
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut) offset(0,350px) once" class="col-xs-12 col-md-8 post-content">
         <h2 class="news-title"><%= post.title %></h2>
         <h5 class="updated"><%= post.date.strftime("%d/%m/%Y") %> | <%= post.author %></h5>
         

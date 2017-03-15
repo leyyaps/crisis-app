@@ -140,49 +140,49 @@
   <div class="container animated fadeIn">
     <div class="row contact-section">
       <div class="col-md-6">
-        <h3 class="red">Venue Address</h3>
+        <h3 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="red">Venue Address</h3>
         
-        <address>
+        <address data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
           Rock City<br>
           8, Talbot St,<br>
           Nottingham<br>
           NG1 5GG<br>
         </address>
         
-        <h3 class="red">Opening Hours</h3>
-        <p>Wednesdays: 9:30pm - 3am <small>(times vary by event see the <%= link_to 'ticket page', tickets_url, :class => 'remove-deco' %> for more info)</small></p>
+        <h3 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="red">Opening Hours</h3>
+        <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">Wednesdays: 9:30pm - 3am <small>(times vary by event see the <%= link_to 'ticket page', tickets_url, :class => 'remove-deco' %> for more info)</small></p>
         
-        <p>
+        <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
           <i class="fa fa-phone fa-stack-1x"></i>
         </span> 0330 332 0611 <small class="text-muted">This number has <strong>no access</strong> to lost property</small>
         </p>
 
-        <p>
+        <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
         </span> 07969 955 639 <small class="text-muted">9am - 5pm only | no access to lost property</small>
         </p>
 
-        <p>
+        <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
         </span> info@carpenoctum.co.uk <small class="text-muted">General Enquiries</small>
         </p>
         
-        <p>
+        <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
         <span class="fa-stack fa-lg">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-question fa-stack-1x" aria-hidden="true"></i>
         </span> <%= link_to 'Lost your shit?', lostproperty_url, :class => "links" %>
         </p>
 
-        <h3 class="red">Our Office in Lenton</h3>
+        <h3 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="red">Our Office in Lenton</h3>
         
-        <address>
+        <address data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
           Carpe Noctum<br>
           Unit T-9, Lenton Business Centre,<br>
           Lenton Boulevard,<br>
@@ -198,28 +198,34 @@
 
 
     <div class="col-md-6">
-    <h3 class="red">Contact Us</h3>
+    <h3 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="red">Contact Us</h3>
 
     <%= simple_form_for @message, :html => {:class => 'form-horizontal' } do |f| %>
-      <div class="form-group">
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
         <%= f.input :name, :required => true, placeholder: "Enter name", :input_html => { :class => 'form-control' } %>
       </div>
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
       <%= f.input :email, :required => true, placeholder: "Enter email", :input_html => { :class => 'form-control' } %>
       <small class="text-muted">We never share your email with anyone else</small>
+      </div>
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
       <%= f.input :mobile, :required => true, placeholder: "Enter your mobile number", :input_html => { :class => 'form-control' } %>
       <small class="text-muted">We never share your mobile with anyone else.</small>
+      </div>
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
       <%= f.input :message, :as => :text, :required => true, placeholder: "Enter your message. Please do not use for lost property.", :input_html => { :class => 'form-control' } %>
+      </div>
       <div class= "hidden">
         <%= f.input :nickname, :hint => 'Leave this field blank!' %>
       </div>
-      <div>
+      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
         </br>
         <%= f.button :submit, 'SEND MESSAGE', :class=> "btn btn-primary" %>
       </div>
     <% end %>
       
      
-        <div class="social-icons my-5">
+        <div data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="social-icons my-5">
         <a href="https://www.facebook.com/ilovecrisis"><i class="fa fa-facebook-official fa-fw fa-3x" aria-hidden="true"></i></a>
         <a href="https://www.instagram.com/crisisnottingham"><i class="fa fa-instagram fa-fw fa-3x" aria-hidden="true"></i></a>
         <a href="https://www.twitter.com/ilove_crisis"><i class="fa fa-twitter-square fa-fw fa-3x" aria-hidden="true"></i></a>
@@ -236,7 +242,7 @@
 <div class="container spacer">
 <h2 data-scroll="toggle(.fromTopIn, .fromTopOut) once">The Team</h2>
   <div class="row spacer">
-      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="col-md-4 text-center profile">
+      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) offset(0,-200px) once" class="col-md-4 text-center profile">
       <%= image_tag("alex.jpg", :alt => "Alex Ottridge", :class => "rounded-circle") %>
         
           <p class="lead">Alex Ottridge</p>
@@ -253,7 +259,7 @@
           </span> <a class="links" href="mailto:alex.ottridge@carpenoctum.co.uk">alex.ottridge@carpenoctum.co.uk</a></p>
       </div>
 
-      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="col-md-4 text-center profile">
+      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) offset(0,-200px) once" class="col-md-4 text-center profile">
         <%= image_tag("lucy.jpg", :alt => "Lucy Bristow", :class => "rounded-circle") %>
           <p class="lead">Lucy Bristow</p>
           <p>Social Media Manager</p>
@@ -268,7 +274,7 @@
           </span> <a class="links" href="mailto:lucy.bristow@carpenoctum.co.uk">lucy.bristow@carpenoctum.co.uk</a></p>
       </div>
 
-      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="col-md-4 text-center profile">
+      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) offset(0,-200px) once" class="col-md-4 text-center profile">
         <%= image_tag("nicola.jpg", :alt => "Nicola Tatler", :class => "rounded-circle") %>
           <p class="lead">Nicola Tatler</p>
           <p>Marketing and Office Manager</p>

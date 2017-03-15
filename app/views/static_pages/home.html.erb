@@ -14,11 +14,11 @@
 <div class="container">
   <h2 class="mt-2 mb-0">Coming up...</h2>
     
-    <div class="card-deck" data-scroll="toggle(.fromBottomIn, .fromBottomOut) offset(0,-200px) once">
+    <div class="card-deck">
     <% @tickets.each_with_index do |ticket, index| %>
     <% if index <= 2 %>
       <div class="col-sm-6 col-md-4 mt-2">
-        <div class="card equal-height animated slideInUp">
+        <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) offset(0,-100px) once" class="card equal-height">
           <%= image_tag ticket.square_image_url, :class =>"img-fluid card-img-top", :alt => "CRISIS - Event" if ticket.square_image? %>
         <div class="card-block text-block">
         <h4 class="card-title text-uppercase"><%= ticket.theme %></h4>
