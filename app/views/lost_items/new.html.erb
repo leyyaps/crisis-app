@@ -37,19 +37,21 @@
   <%= f.input :mobile, :required => true, placeholder: "Enter your mobile number", :input_html => { :class => 'form-control' } %>
   </div>
   <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="form-group">
-  <%= f.input :date, :label =>"Date you attended", :as => :string, :required => true, placeholder: "dd/mm/yy", :input_html => { :class => 'form-control col-sm-2' } %>
+  <%= f.input :date, :label =>"Date you attended", :as => :string, :required => true, placeholder: "dd/mm/yy", :input_html => { :type => "date", :class => 'form-control col-sm-2' } %>
   </div>
   <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="form-group">
   <%= f.input :message,:label => "Your lost property details", :as => :text, :required => true, placeholder: "Please tell us about your lost items. Be as detailed as possible", :input_html => { :class => 'form-control' } %>
   </div>
-  <p data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="mt-2">We are sadly unable to return any lost dignity and self-respect.</p>
+  
   <div class= "hidden">
     <%= f.input :nickname, :hint => 'Leave this field blank!' %>
   </div>
+  <p data-scroll="toggle(.fromBottomIn, .fromBottomOut) once">Please note: If you do not hear back within 48hrs it means that your item has not been found <i class="fa fa-frown-o" aria-hidden="true"></i></p>
   <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once">
     </br>
     <%= f.button :submit, 'SEND MESSAGE', :class=> "btn btn-primary" %>
   </div>
+  <p data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="mt-2">We are sadly unable to return any lost dignity and self-respect.</p>
 <% end %>
 
 </div>
