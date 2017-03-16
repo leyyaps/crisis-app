@@ -89,6 +89,25 @@ button.close {
   color: #fff;
 }
 
+/* FOOTER NEW */
+
+ul.footer-list {
+    list-style:none;
+    padding-left:0;
+
+}
+
+@media (max-width: 768px) {
+  .sm-center {
+    text-align: center;
+    font-size: 12px;
+  }
+
+}
+
+
+
+/* FOOTER NEW END */
 
  @-moz-keyframes dropHeader {
      0% {
@@ -218,8 +237,8 @@ button.close {
  }
 
  h6 {
-   color: #28394b;
-   background-color: #ffffff;
+   color: #e30613;
+   
  }
 
  h2.headline {
@@ -267,7 +286,9 @@ button.close {
    padding-bottom: 1rem;
  }
 
-
+a.white {
+  color: #ffffff;
+}
 
  .post-content {
    background-color: #3D3D3A;

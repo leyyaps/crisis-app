@@ -1,51 +1,87 @@
-<footer class="footer-distributed">
-  <div class="footer-left">
-    <p><%= image_tag("crisis-logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand footer-brand") %></p>
-   
-    <p class="footer-links">
-
-      <%= link_to 'Home', root_url %>
-      ·
-      <%= link_to 'About', about_url %>
-      ·
-      <%= link_to 'News', posts_url %>
-      ·
-      <%= link_to 'Tickets', tickets_url %>
+<footer>
+<div class="container py-2 sm-center">
+  <div class="row">
+    <div class="col-md-4 py-2">
+      <%= image_tag("white_crisis_logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand") %>
+      <ul class="footer-list my-2">
+      <li class="d-inline"><%= link_to 'Home', root_url %></li> |
       
+      <li class="d-inline"><%= link_to 'About', about_url %></li> |
+      
+      <li class="d-inline"><%= link_to 'News', posts_url %></li> |
+      
+      <li class="d-inline"><%= link_to 'Tickets', tickets_url %></li> |
+      <li class="d-inline"><%= link_to 'Contact', contact_us_url %></li>
+      </ul>
+
+      <a class="white" href="http://www.carpenoctum.co.uk">Carpe Noctum Ltd</a> &copy; 2010
+    </div>
     
-    </p>
-    <p class="footer-company-name"><a href="http://www.carpenoctum.co.uk">Carpe Noctum Ltd</a> &copy; 2010</p>
-  
-  </div>
-
-  <div class="footer-center">
-    <div>
-      <i class="fa fa-map-marker"></i>
-      <p><span>CRISIS, 8 Talbot Street</span> Nottingham</p>
+    <div class="col-md-4 py-2 sm-center">
+    <div class="">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+      </span>
+      <p class="d-inline"><span>CRISIS, 8 Talbot Street</span> Nottingham</p>
     </div>
     <div>
-      <i class="fa fa-phone"></i>
-      <p>0330 332 0611</p>
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+      </span>
+      
+      <p class="d-inline">0330 332 0611</p>
     </div>
     <div>
-      <i class="fa fa-envelope"></i>
-      <p><a href="mailto:info@carpenoctum.co.uk">info@carpenoctum.co.uk</a></p>
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+      
+      <p class="d-inline"><a class="white" href="mailto:info@carpenoctum.co.uk">info@carpenoctum.co.uk</a></p>
     </div>
-
-  </div>
-  <div class="footer-right">
-    <p class="footer-company-about">
-      <span>About the company</span>
+      
+    </div>
+    <div class="col-md-4 py-2 sm-center">
+    
+      <h6>About the company</h6>
+    <p class="">
       CRISIS &#174; is a Carpe Noctum brand. Welcome to the UK's Biggest Weekly Student night in Nottingham.
     </p>
-    <div class="footer-icons">
-      <a href="https://facebook.com/ilovecrisis"><i class="fa fa-facebook"></i></a>
-      <a href="https:/twitter.com/ilove_crisis"><i class="fa fa-twitter"></i></a>
-      <a href="https://plus.google.com/+crisisnottingham"><i class="fa fa-google-plus"></i></a>
-      <a href="https://instagram.com/crisisnottingham"><i class="fa fa-instagram"></i></a>
+    <div class="">
+      <a href="https://facebook.com/ilovecrisis">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span></a>
+
+
+      <a href="https:/twitter.com/ilove_crisis">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span></a>
+      </a>
+
+      <a href="https://plus.google.com/+crisisnottingham">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+      </span>
+      </a>
+
+      <a href="https://instagram.com/crisisnottingham">
+      <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+      </span>
+
+      </a>
 
     </div>
-
+      
+    </div>
   </div>
-
-</footer>
+  </div>
+  </footer>
