@@ -16,8 +16,10 @@
     
     <div class="card-block">
       <h4 class="card-title"><%= ticket.theme %></h4>
-      <h5><%= ticket.date.to_formatted_s(:rfc822) %></h5>
-      <p class="card-text"><%= ticket.description %></p>
+      <h5 class="mb-0"><%= ticket.date.to_formatted_s(:rfc822) %></h5>
+      <small class="card-text red">Doors open: <%= ticket.opening_time.to_formatted_s(:time) %></small>
+      <p class="card-text mt-1"><%= ticket.description %></p>
+      
       <%= link_to 'Buy Tickets', ticket, :class =>'btn btn-primary text-uppercase' %>
     </div>
     
