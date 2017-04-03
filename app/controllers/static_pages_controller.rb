@@ -10,7 +10,8 @@ class StaticPagesController < ApplicationController
   def jobs
   end
 
- 
+  def loaderio
+  end
 
 
   def termsandconditions
