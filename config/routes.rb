@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'jobs' => 'static_pages#jobs'
 
+  get 'privacy' => 'static_pages#privacy'
+
   get 'loaderio-0a7e4837e88f50cf53f7be88cd053c92' => 'static_pages#loaderio'
 
 
