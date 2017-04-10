@@ -10,7 +10,7 @@ class Message < MailForm::Base
   def headers
     {
       :subject => "CRISIS website enquiry",
-      :to => "info@ipsofactouk.com",
+      :to => "andrew.smith@ipsofactouk.com",
       :from => %("#{name}" <#{email}>),
       :reply_to => %<#{email}>
     }
