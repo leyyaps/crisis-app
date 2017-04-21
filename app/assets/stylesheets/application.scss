@@ -107,7 +107,12 @@ ul.footer-list {
 
 }
 
-
+.red-background {
+  background:#e30613;
+}
+.white-background {
+  background:#fff;
+}
 
 /* FOOTER NEW END */
 
@@ -445,9 +450,7 @@ a.white {
  }
 
 
-.square-img {
-  max-width: 150px;
-}
+
 iframe.fixr {
   width:100%;
   min-height: 700px;
@@ -565,8 +568,24 @@ height: 100%;
    padding-top: 0;
  }
 
+ h2.show-title {
+  font-size: 24px;
+ }
+ p.release-info {
+  font-size: 16px;
  }
 
+ }
+ @media (max-width: 576px) {
+
+  h2.show-title {
+   font-size: 16px;
+  }
+  p.release-info {
+   font-size: 12px;
+  }
+
+}
 
 
 

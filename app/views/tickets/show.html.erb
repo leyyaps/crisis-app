@@ -1,10 +1,16 @@
 <div data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="cover-img">
   <div class="container hero-content">
-    <img class="square-img" src="<%=@ticket.square_image %>">
-    
+    <div class="row align-items-center">
+    <div class="col-4 col-md-3">
+    <img class="img-fluid" src="<%=@ticket.square_image %>">
+    </div>
+    <div class="col-8 col-md-9">
 
-    <h2 class="d-inline white"><%= @ticket.theme %> | <span class="red"><%= @ticket.date.to_formatted_s(:rfc822) %></span></h2>
-    
+    <h2 class="white show-title"><%= @ticket.theme %> | <span class="red"><%= @ticket.date.to_formatted_s(:rfc822) %></span></h2>
+    <p class="text-uppercase release-info mb-0">Tickets released: <span class="px-1 red-background"><%= @ticket.ticket_release_date.to_formatted_s(:rfc822) %></span> <small>at</small> <span class="px-1 white-background red bold"><%= @ticket.ticket_release_time.strftime("%H:%M") %></span></p>
+    </div>
+
+    </div>
   </div>
 </div>
 <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="container">

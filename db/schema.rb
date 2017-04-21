@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314214050) do
+ActiveRecord::Schema.define(version: 20170421115328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,9 +85,11 @@ ActiveRecord::Schema.define(version: 20170314214050) do
     t.time     "opening_time"
     t.string   "theme"
     t.text     "description"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "fixr"
+    t.date     "ticket_release_date"
+    t.time     "ticket_release_time"
   end
 
 end
