@@ -780,7 +780,9 @@ height: 100%;
   transform: scale(0.7,0.7);
   opacity: 0.0;
 }
-
+.boxed {
+  border: solid 1px white
+}
 // Google Form
 .freebirdFormviewerViewItemsItemItemTitle {
   text-align: left;
