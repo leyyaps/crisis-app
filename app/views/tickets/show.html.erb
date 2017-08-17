@@ -15,7 +15,109 @@
 </div>
 <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="container">
 
-508931300?compact=true
+
+<div class="container">
+  <h3 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="mt-3">Ever wondered about our tickets...</h3>
+   
+      <div id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="card">
+          <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="card-header" role="tab" id="headingOne">
+            <h5 class="mb-0">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            How are we allocating tickets?
+            </a>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="card-block">
+                Except for All Nighters, we allocate 2100 tickets for advance purchase. They are as follows:
+                <ul class="pt-2">
+                    <li>500 Sports Teams Tickets</li>
+                    <li>150 Socials Non-Sport (Socs / JCRS) </li>
+                    <li>700 Campus/Jubilee (Paper)</li>
+                    <li>675 General Online Sales</li>
+                    <li>50 SU Box Office (Paper)</li>
+                    <li>25 SB Campus (Paper)</li>
+                </ul>
+                This all then changes in term 2 when campus tickets are switched to e-tickets. This is why you may find it slightly easier in term two.
+                <p>
+                We then allow approximately 200-400 door admissions depending on how many of the tickets show up. As people leave, we admit any spare capacity there too.
+                </p>
+                <p>For All Nighters, it's a free-for-all with everything going online.</p>
+            </div>
+          </div>
+        </div>
+      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="card">
+        <div class="card-header" role="tab" id="headingTwo">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Why are sports tickets £100?
+            </a>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="card-block">
+            Just a quirk of the ticketing system. You could technically buy a £100 ticket if you really wanted to go and were slightly nuts, but what we do is issue a discount code to the Sports teams that have booked a social with us for that week. They then enter this code on this section of tickets and it brings the ticket down to the correct price.
+          </div>
+        </div>
+      </div>
+      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="card">
+        <div class="card-header" role="tab" id="headingThree">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Why are ticket times early?
+            </a>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="card-block">
+            <p>Demand for tickets is usually around 4 times what we have in available space. So, in order to try and get as many tickets out to those what want them we use time to stagger them.</p>
+            <p>So, just like a restaurant taking a booking at 7pm and again for the same table for 9pm, we utilise time slots to recycle space. It also allows us to make the ticket queue nice and speedy as people arrive in waves.</p>
+            <p>Of course, the downside is we have to be strict on the ticket times.</p>
+            <p>You may also notice the ticket expiry times can vary by over an hour on some weeks. This is usually due to a music gig occuring on the same night in Rock City's main hall. For these events, we allow paying customers to enter BCL at the start, then as the gig is cleared, the doors open to the main room. At the same time, ticketholders can then also get access through the main entrance.</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="card mb-3">
+        <div class="card-header" role="tab" id="headingFour">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Why, after selecting the number of tickets, did I not then get them?
+            </a>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="card-block">
+            <p>This is the way the ticketing provider issue tickets. When you select tickets, it is not a basket like other sites. It something we have raised with them and they are changing it in the next release (approx October).</p>
+            <p>The advantage of their way is if you are pre-registered or have bought before, the transaction is rapid, but if you haven't registered or bought before you may lose whats in your basket to people who have.</p>
+          </div>
+        </div>
+      </div>
+
+      <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) once" class="card mb-3">
+        <div class="card-header" role="tab" id="headingFive">
+          <h5 class="mb-0">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Do we allow ticket reselling?
+            </a>
+          </h5>
+        </div>
+        <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+          <div class="card-block">
+            <p>Yes, you can resell tickets within the FIXR ticketing app up to (nearly always) 1 hour before we open the club.</p>
+            <p><strong class="red">This is the only reselling we accept.</strong> Tickets resold another way, e.g. screenshot on "buy and sell" are prohibited.</p>
+            <p>We are strongly against the marking up of tickets for profit. This is why we only allow transactions of up to 4 tickets per transaction on regular tickets and 1 per person on Sports Tickets.</p>
+          </div>
+        </div>
+      </div>
+  
+
+  </div>
+
+</div>
+
 
 <iframe src="https://fixr-app.com/event/<%= @ticket.fixr %>?compact=true"
         class="fixr">
