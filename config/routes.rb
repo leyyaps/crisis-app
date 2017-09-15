@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'privacy' => 'static_pages#privacy'
 
+  get 'sevenlegged' => 'static_pages#sevenlegged'
+
   get 'loaderio-0a7e4837e88f50cf53f7be88cd053c92' => 'static_pages#loaderio-0a7e4837e88f50cf53f7be88cd053c92.txt'
 
 

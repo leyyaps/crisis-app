@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
   def about
   end
-
+  def sevenlegged
+  end
   def home
    @tickets = Ticket.upcoming
    
