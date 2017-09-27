@@ -795,3 +795,15 @@ height: 100%;
 .fixed-height {
   min-height: 500px;
 }
+hr.red{
+  border: 1px solid #e30613;
+  width: 25%;
+}
+hr.red-small{
+  border: 1px solid #e30613;
+  width: 15%;
+}
+
+table {
+  border: 1px solid #fff;
+}
