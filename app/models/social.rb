@@ -11,7 +11,7 @@ class Social < MailForm::Base
   def headers
     {
       :subject => "CRISIS social enquiry",
-      :to => "jamie.turner@carpenoctum.co.uk",
+      :to => "info@carpenoctum.co.uk",
       :from => %("#{name}" <#{email}>),
       :reply_to => %<#{email}>
     }
