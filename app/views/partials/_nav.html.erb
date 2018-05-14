@@ -1,20 +1,20 @@
 
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerCRISIS" aria-controls="navbarTogglerCRISIS" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <%= link_to image_tag("white_crisis_logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand hidden-md-down"), root_url %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <%= image_tag("white_crisis_logo.svg", :alt => "CRISIS Logo", :class => "navbar-brand hidden-md-down") %>
-  
-  <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerCRISIS">
-    
-    <ul class="navbar-nav">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
         <%= link_to 'Home', root_url, :class =>'nav-link hvr-underline-reveal' %>
       </li>
-     
       <li class="nav-item">
         <%= link_to 'About', about_url, :class =>'nav-link hvr-underline-reveal' %>
       </li>
+
       <li class="nav-item">
         <%= link_to 'News', posts_url, :class =>'nav-link hvr-underline-reveal' %>
       </li>
@@ -34,13 +34,23 @@
       </li>
       <li class="nav-item">
         <a href="https://carpenoctum.zendesk.com/hc/en-us" class="nav-link pull-xs-right hvr-underline-reveal">Help</a>
-       
       </li>
-      <li class="nav-item">
-        <%= link_to 'Contact Us', contact_us_path, :class =>'nav-link pull-xs-right hvr-underline-reveal' %>
-      </li>
+      
     </ul>
-   
+    
   </div>
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
