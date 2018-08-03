@@ -17,9 +17,8 @@ Rails.application.routes.draw do
 
   get 'termsandconditions' => 'static_pages#termsandconditions'
 
-
-  match '/contact_us',     to: 'messages#new',             via: 'get'
-  resources "messages", only: [:new, :create]
+  get 'contact_us', to: 'messages#new', as: 'new_message'
+  post 'contact_us', to: 'messages#create', as: 'create_message'
 
 
   match '/lostproperty', to: 'lost_items#new', via: 'get' 

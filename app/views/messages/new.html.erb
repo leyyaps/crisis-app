@@ -7,22 +7,6 @@
 
 
 
-<div class="container">
-
-<% flash.each do |key, value| %>
-  <% alert_class = case key
-                   when :notice then "success"
-                   when :error then "danger"
-                   else key
-                   end %>
-  <%= content_tag :div, class: "alert alert-#{alert_class}" do %>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <%= value %>
-  <% end %>
-<% end %>
-
-
-</div>
 
 <div class="container">
   <h3 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="mt-3">Some common questions for you first...</h3>
@@ -38,7 +22,7 @@
           </div>
 
           <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="card-block">
+            <div class="card-block px-2 py-2">
             <ol>
             <li>If you haven’t already done so check your junk email folder.</li>
             <li>If you still can’t find them log into your <a href="http://www.fixr.com">fixr</a> account, go into the ticket section and check there. Alternatively, please use the <a href="https://fixr-app.com/download"> fixr app</a>.</li>
@@ -56,7 +40,7 @@
           </h5>
         </div>
         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-          <div class="card-block">
+          <div class="card-block px-2 py-2">
             Sorry to hear that. You need to head to our <%= link_to 'lost-property', lostproperty_url, :class => "links"  %> page. Self respect is unlikely to be found.
           </div>
         </div>
@@ -70,7 +54,7 @@
           </h5>
         </div>
         <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-          <div class="card-block">
+          <div class="card-block px-2 py-2">
             It happens. Sadly, we can't help here. It is entirely at the discretion of which security member you get on the night as you go through the door. Be nice, tell the truth and you are usually ok. But it is entirely up to them.
           </div>
         </div>
@@ -84,7 +68,7 @@
           </h5>
         </div>
         <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
-          <div class="card-block">
+          <div class="card-block px-2 py-2">
             We can't all be perfect. Not to worry, we generally accept any University student card. We also allow non-students when accompanied by a UoN carded student. However, security still reserve the right to refuse entry to anyone they deem too intoxicated or may potentially cause trouble.
           </div>
         </div>
@@ -98,8 +82,8 @@
           </h5>
         </div>
         <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
-          <div class="card-block">
-            Tickets must only be transfered through the Fixr website or app. Only tickets successfully transfered this way will be admitted. We do not accept screenshots or photos of screens.
+          <div class="card-block px-2 py-2">
+            Tickets must only be transfered through the Fixr website or app. Only tickets successfully transfered this way will be admitted. Remember to accept the link once a transfer has been done otherwise it won't go through. We do not accept screenshots or photos of screens.
           </div>
         </div>
       </div>
@@ -112,8 +96,8 @@
           </h5>
         </div>
         <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
-          <div class="card-block">
-            Yes - Every week. It's usually £6 before 10:30pm and £7 after. You can keep up to date on our paying queue length on our snapchat (wearecrisis) or <a href="https://www.twitter.com/ilove_crisis">twitter</a> feed.
+          <div class="card-block px-2 py-2">
+            Yes - Every week. CRISIS now has "The Q" which is our own awesome way of letting you party while you queue. Instead of waiting outside the club, head to Rescue Rooms(next door) and you can be queued electronically in there. Once we have space we will text you to say we are ready for you and you can pick up your ticket from within Rescue Rooms. It's usually £7 entry all night and is <strong>card only</strong>. You can keep up to date on our paying queue length on our snapchat (wearecrisis) or <a href="https://www.twitter.com/ilove_crisis">twitter</a> feed.
           </div>
         </div>
       </div>
@@ -126,8 +110,8 @@
           </h5>
         </div>
         <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven">
-          <div class="card-block">
-            Yes. Both on entry and at the bars. There is also a cash machine inside if you are feeling old school.
+          <div class="card-block px-2 py-2">
+            Yes. It's card only for your admission and you can use either cash or card at the bars. There is also a cash machine inside if you are feeling really old school.
           </div>
         </div>
       </div>
@@ -140,9 +124,9 @@
           </h5>
         </div>
         <div id="collapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight">
-          <div class="card-block">
+          <div class="card-block px-2 py-2">
             Is it after 9pm? If so, transfers are prohibited. You will not be able to transfer this ticket. Please do not attempt to do so using screen shots, photos or some other means.
-            Not after 9pm? It may have been transfered 3 times already. There is a limit on transfers. If it has been transfered 3 times, it will no longer be able to be transfered.
+            Not after 9pm? It may have been transfered 3 times already. There is a limit on transfers. If it has been transfered 3 times, it will no longer be able to be transfered. Neither of those cases apply to you? Sounds like techincal error so please contact fixr (our ticketing provider) directly - <a href="mailto:team@fixr.co">team@fixr.co</a>
           </div>
         </div>
       </div>
@@ -165,33 +149,33 @@
         </address>
         
         <h3 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="red">Opening Hours</h3>
-        <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">Wednesdays: 8pm - 3am <small>(times vary by event see the <%= link_to 'ticket page', tickets_url, :class => 'remove-deco' %> for more info)</small></p>
+        <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">Wednesdays: 8pm ish - 3am <small>(times vary by event see the <%= link_to 'ticket page', tickets_url, :class => 'remove-deco' %> for more info)</small></p>
         
         <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
         <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
-          <i class="fa fa-phone fa-stack-1x"></i>
+          <i class="fas fa-circle fa-stack-2x" aria-hidden="true"></i>
+          <i class="fas fa-phone fa-stack-1x"></i>
         </span> 0330 332 0611 <small class="text-muted">This number has <strong>no access</strong> to lost property</small>
         </p>
 
         <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
         <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
+          <i class="fas fa-square fa-stack-2x"></i>
+          <i class="fas fa-mobile-alt fa-stack-1x" aria-hidden="true"></i>
         </span> 07969 955 639 <small class="text-muted">9am - 5pm only | no access to lost property</small>
         </p>
 
         <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
         <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
+          <i class="fas fa-square fa-stack-2x"></i>
+          <i class="fas fa-paper-plane fa-stack-1x" aria-hidden="true"></i>
         </span> info@carpenoctum.co.uk <small class="text-muted">General Enquiries</small>
         </p>
         
         <p data-scroll="toggle(.fromLeftIn, .fromLeftOut) once">
         <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-question fa-stack-1x" aria-hidden="true"></i>
+          <i class="fas fa-square fa-stack-2x"></i>
+          <i class="fas fa-shopping-bag fa-stack-1x" aria-hidden="true"></i>
         </span> <%= link_to 'Lost your shit?', lostproperty_url, :class => "links" %>
         </p>
 
@@ -215,39 +199,56 @@
     <div class="col-md-6">
     <h3 data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="red">Contact Us</h3>
 
-    <%= simple_form_for @message, :html => {:class => 'form-horizontal' } do |f| %>
-      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
-        <%= f.input :name, :required => true, placeholder: "Enter name", :input_html => { :class => 'form-control' } %>
-      </div>
-      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
-      <%= f.input :email, :required => true, placeholder: "Enter email", :input_html => { :class => 'form-control' } %>
-      <small class="text-muted">We never share your email with anyone else</small>
-      </div>
-      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
-      <%= f.input :mobile, :required => true, placeholder: "Enter your mobile number", :input_html => { :class => 'form-control' } %>
-      <small class="text-muted">We never share your mobile with anyone else.</small>
-      </div>
-      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
-      <%= f.input :subject, collection: ["Reporting Ticket Reseller","Refund Request","Complaint","Social Enquiry","Job/Ticket Selling","Sponsorship", "Charity Tickets", "Birthday", "Other Enquiry"], :required => true, placeholder: "Subject", :input_html => { :class => 'form-control' } %>
-      
-      </div>
-      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
-      <%= f.input :message, :as => :text, :required => true, placeholder: "Enter your message. Please do not use for lost property.", :input_html => { :class => 'form-control' } %>
-      </div>
-      <div class= "hidden">
-        <%= f.input :nickname, :hint => 'Leave this field blank!' %>
-      </div>
-      <div data-scroll="toggle(.fromRightIn, .fromRightOut) once" class="form-group">
-        </br>
-        <%= f.button :submit, 'SEND MESSAGE', :class=> "btn btn-primary" %>
-      </div>
+    <% flash.each do |key, value| %>
+      <% alert_class = case key
+                       when :notice then "success"
+                       when :error then "danger"
+                       else key
+                       end %>
+      <%= content_tag :div, class: "alert alert-#{alert_class}" do %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <%= value %>
+      <% end %>
     <% end %>
+
+
+    <%= form_for @message, url: create_message_url do |f| %>
+      
+      <%= @message.errors.full_messages.join(', ') %>
+
+      <div class="form-group">
+          <%= f.text_field :name, placeholder: 'Enter Name', class:'form-control' %>      
+      </div>
+      <div class="form-group">
+        <%= f.email_field :email, placeholder: 'Enter Email', class:'form-control' %>
+        <small class="text-muted">We never share your email with anyone else</small>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :mobile, placeholder: 'Enter Mobile', class:'form-control' %>
+        <small class="text-muted">We never share your email with anyone else</small>
+      </div>
+      <div class="form-group">
+        <label>Subject: </label>
+        <%= f.select :subject, [['Reporting Ticket Reseller', 1], ['Complaint', 2], ['Social Enquiry', 3], ['Job/Ticket Selling', 4], ['Sponsorship', 5], ['Charity Tickets', 6], ['Birthday', 7], ['Other Enquiry', 7]], :input_html => { :class => 'form-control' } %>
+      </div>
+      <div class="form-group">
+        <%= f.text_area :body, placeholder: 'Enter your message. Please do not use for lost property.', class:'message form-control' %>
+      </div>
+      <%= f.submit 'SEND MESSAGE', class:'btn btn-primary' %>
+    <% end %>
+
+
+
+
+
+
+
       
      
         <div data-scroll="toggle(.fromTopIn, .fromTopOut) once" class="social-icons my-5">
-        <a href="https://www.facebook.com/ilovecrisis"><i class="fa fa-facebook-official fa-fw fa-3x" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/wearecrisis"><i class="fa fa-instagram fa-fw fa-3x" aria-hidden="true"></i></a>
-        <a href="https://www.twitter.com/ilove_crisis"><i class="fa fa-twitter-square fa-fw fa-3x" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/ilovecrisis"><i class="fab fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+        <a class="mx-4" href="https://www.instagram.com/wearecrisis"><i class="fab fa-instagram fa-3x" aria-hidden="true"></i></a>
+        <a href="https://www.twitter.com/ilove_crisis"><i class="fab fa-twitter-square fa-3x" aria-hidden="true"></i></a>
         
         </div>
       
@@ -266,62 +267,58 @@
         
           <p class="lead">Jamie Louise Turner</p>
           <p>Events Coordinator</p>
+
+          
+  
           <p>
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
-          </span> 07969 955 639</p>
-          <p>
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
-          </span> <a class="links" href="mailto:jamie.turner@carpenoctum.co.uk">jamie.turner@carpenoctum.co.uk</a></p>
+            <span class="fa-stack fa-sm mr-2">
+            <i class="fas fa-square fa-stack-2x"></i>
+            <i class="fas fa-paper-plane fa-stack-1x fa-inverse"></i>
+            </span>
+          <a class="links " href="mailto:jamie.turner@carpenoctum.co.uk">jamie.turner@carpenoctum.co.uk</a>
+          </p>
       </div>
 
       <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) offset(0,-200px) once" class="col-md-3 text-center profile">
         <%= image_tag("bobby.jpg", :alt => "Bobby Marsh", :class => "rounded-circle") %>
           <p class="lead">Bobby Marsh</p>
-          <p>Social Media Team</p>
+          <p>Marketing</p>
+          
+          
           <p>
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
-          </span> 07944 201 656</p>
-          <p><span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
-          </span> <a class="links" href="mailto:bobby.marsh@carpenoctum.co.uk">bobby.marsh@carpenoctum.co.uk</a></p>
+            <span class="fa-stack fa-sm mr-2">
+              <i class="fas fa-square fa-stack-2x"></i>
+              <i class="fas fa-paper-plane fa-stack-1x fa-inverse"></i>
+            </span>
+            <a class="links" href="mailto:bobby.marsh@carpenoctum.co.uk">bobby.marsh@carpenoctum.co.uk</a>
+          </p>
       </div>
 
       
       <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) offset(0,-200px) once" class="col-md-3 text-center profile">
-        <%= image_tag("heather.jpg", :alt => "Heather Hobbs", :class => "rounded-circle") %>
-          <p class="lead">Heather Hobbs</p>
+        <%= image_tag("emily.jpg", :alt => "Emily Shea-Simonds Profile Pic", :class => "rounded-circle") %>
+          <p class="lead">Emily Shea-Simonds</p>
           <p>Social Media Team</p>
+          
           <p>
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
-          </span> 07804 371 744</p>
-          <p><span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
-          </span> <a class="links" href="mailto:heather.hobbs@carpenoctum.co.uk">heather.hobbs@carpenoctum.co.uk</a></p>
+            <span class="fa-stack fa-sm mr-2">
+              <i class="fas fa-square fa-stack-2x"></i>
+              <i class="fas fa-paper-plane fa-stack-1x fa-inverse"></i>
+            </span>
+            <a class="links" href="mailto:emily.shea-simonds@carpenoctum.co.uk">emily.shea-simonds@carpenoctum.co.uk</a>
+          </p>
       </div>
 
       <div data-scroll="toggle(.fromBottomIn, .fromBottomOut) offset(0,-200px) once" class="col-md-3 text-center profile">
-        <%= image_tag("bg.jpg", :alt => "Becky Greenwell", :class => "rounded-circle") %>
-          <p class="lead">Becky Greenwell</p>
+        <%= image_tag("amy.jpg", :alt => "Amy Howell", :class => "rounded-circle") %>
+          <p class="lead">Amy Howell</p>
           <p>Social Media Team</p>
+          
           <p>
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-mobile fa-stack-1x" aria-hidden="true"></i>
-          </span> 07791 100 058</p>
-          <p><span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-envelope-o fa-stack-1x" aria-hidden="true"></i>
-          </span> <a class="links" href="mailto:becky.greenwell@carpenoctum.co.uk">becky.greenwell@carpenoctum.co.uk</a></p>
+            <span class="fa-stack fa-sm mr-2">
+              <i class="fas fa-square fa-stack-2x"></i>
+              <i class="fas fa-paper-plane fa-stack-1x fa-inverse"></i>
+            </span><a class="links" href="mailto:amy.howell@carpenoctum.co.uk">amy.howell@carpenoctum.co.uk</a></p>
       </div>
   </div>
 </div>
